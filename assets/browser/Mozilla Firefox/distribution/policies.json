@@ -1,0 +1,111 @@
+{
+  "policies": {
+    "BlockAboutConfig": false,
+    "DisablePocket": false,
+    "DisableTelemetry": true,
+    "DNSOverHTTPS": {
+      "Enabled": false,
+      "ExcludedDomains": ["https://addons.mozilla.org"],
+      "Locked": false
+    },
+    "DontCheckDefaultBrowser": true,
+    "ExtensionSettings": {
+      "jid0-adyhmvsP91nUO8pRv0Mn2VKeB84@jetpack": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/raindropio/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "queryamoid@kaply.com": {
+        "install_url": "https://github.com/mkaply/queryamoid/releases/download/v0.2/query_amo_addon_id-0.2-fx.xpi",
+        "installation_mode": "allowed"
+      },
+      "uBlock0@raymondhill.net": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "{74145f27-f039-47ce-a470-a662b129930a}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/violentmonkey/latest.xpi",
+        "installation_mode": "normal_installed"
+      }
+    },
+    "ExtensionUpdate": true,
+    "FlashPlugin": {
+      "Default": false,
+      "Locked": true
+    },
+    "Homepage": {
+      "Locked": false,
+      "StartPage": "previous-session"
+    },
+    "ManagedBookmarks": [
+      {
+        "children": [
+          {
+            "name": "Get involved",
+            "url": "https://www.mozilla.org/en-US/contribute/"
+          },
+          {
+            "name": "Help & Tutorials",
+            "url": "https://support.mozilla.org/en-US/products/firefox"
+          },
+          {
+            "name": "Policy templates",
+            "url": "https://github.com/mozilla/policy-templates"
+          },
+          {
+            "name": "Startpage",
+            "url": "https://www.mozilla.org/en-US/firefox/"
+          },
+          {
+            "name": "addons.mozilla.org",
+            "url": "https://addons.mozilla.org/en-US/firefox/"
+          }
+        ],
+        "name": "Mozilla"
+      },
+      {
+        "children": [
+          {
+            "name": "addons",
+            "url": "about:addons"
+          },
+          {
+            "name": "config",
+            "url": "about:config"
+          },
+          {
+            "name": "policies",
+            "url": "about:policies"
+          },
+          {
+            "name": "profiles",
+            "url": "about:profiles"
+          }
+        ],
+        "name": "About"
+      },
+      {
+        "children": [
+          {
+            "name": "gmail",
+            "url": "https://www.google.com/gmail/about/"
+          },
+          {
+            "name": "protonmail",
+            "url": "https://protonmail.com/"
+          }
+        ],
+        "name": "Mail"
+      },
+      {
+        "toplevel_name": "Managed bookmarks"
+      }
+    ],
+    "NoDefaultBookmarks": true,
+    "RequestedLocales": "en-US,fr,es",
+    "SSLVersionMin": "tls1"
+  }
+}
