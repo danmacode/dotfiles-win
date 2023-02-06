@@ -1,4 +1,5 @@
 {
+  "__COMMENT__ More Information": "https://github.com/mozilla/policy-templates/blob/master/README.md",
   "policies": {
     "BlockAboutConfig": false,
     "DisablePocket": false,
@@ -105,7 +106,7 @@
       }
     ],
     "NoDefaultBookmarks": true,
-    "RequestedLocales": "en-US,fr,es",
+    "RequestedLocales": ["en-US", "fr", "es"],
     "SSLVersionMin": "tls1"
   }
 }
