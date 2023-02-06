@@ -1,0 +1,6 @@
+# vim: set filetype=gitconfig:
+#
+# ~/.config/git/config - This file is always read before ~/.gitconfig
+[alias]
+	comsig = commit -S
+	su = submodule update

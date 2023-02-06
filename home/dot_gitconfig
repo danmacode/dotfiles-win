@@ -1,0 +1,19 @@
+# vim: set filetype=gitconfig:
+#
+# ~/.gitconfig - This global gitconfig is read after ~/.config/git/config
+[user]
+	name = danmacode
+	email = danmacode1@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = code --wait
+	autocrlf = input
+	eol = lf
+	# std convention is treating all filenames as case insensitive
+	ignoreCase = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
