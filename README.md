@@ -9,11 +9,12 @@ chezmoi init https://github.com/danmacode/dotfiles-win.git
 chezmoi apply # will show diff before any overwrite
 ```
 
-Or just ssh clone the repo and then download the submodules(if there are any).
+Or just ssh clone the repo into chezmoi's data folder and then download the submodules(if there are any).
 
 ```sh
-git clone git@github.com:danmacode/dotfiles-win.git
-cd dotfiles-win; git submodule update --init --recursive
+git clone git@github.com:danmacode/dotfiles-win.git $HOME/.local/share/chezmoi
+cd $HOME/.local/share/chezmoi
+git submodule update --init --recursive
 ```
 
 ## License
