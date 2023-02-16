@@ -1,4 +1,8 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.quickSuggestions": {
@@ -12,7 +16,12 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
   "[shellscript]": {
+    "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
   "editor.fontFamily": "Consolas, 'Courier New', monospace",
@@ -23,6 +32,5 @@
   "files.insertFinalNewline": true,
   "settingsSync.ignoredExtensions": [],
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "Monokai Pro",
-  "workbench.iconTheme": "Monokai Pro Icons"
+  "workbench.iconTheme": "vscode-icons"
 }
