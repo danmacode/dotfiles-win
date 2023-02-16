@@ -40,7 +40,9 @@ function Add-ToPath {
         Write-Host "No appdata python found, switching to $env:SystemDrive\Python*"
         $verFolder = $(Get-ChildItem ${env:SystemDrive}\Python* | Select-Object -First 1)
     }
-    if ($verFolder -eq "") {
+    # Maybe the file is in another location - e.g. C:\Program Files\Python311
+    if (!(Test-Path $verFolder)) { $verFolder = $(Split-Path -Path (get-command python.exe).Path -Parent) }
+    if (!(Test-Path $verFolder)) {
         throw "Can't find Python folder"
     }
     else {
@@ -48,7 +50,6 @@ function Add-ToPath {
         Add-Path -LiteralPath "$verFolder\" -Scope User
         Add-Path -LiteralPath "$verFolder\Scripts\" -Scope User
     }
-    
 }
 
 function Update-Pip {
