@@ -7,7 +7,6 @@ root = true
 # Unix-style newlines w/ newline ending every file
 [*]
 indent_size = space
-indent_size = 2
 end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
@@ -21,6 +20,10 @@ charset = utf-8
 # 4 space indentation
 [*.py]
 indent_style = space
+indent_size = 4
+
+[*.go]
+indent_style = tab
 indent_size = 4
 
 [*.ts]

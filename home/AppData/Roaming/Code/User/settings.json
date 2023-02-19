@@ -1,7 +1,17 @@
 {
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",

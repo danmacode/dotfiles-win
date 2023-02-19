@@ -2,7 +2,7 @@
 #
 # ~/Documents/PowerShell/Microsoft.Powershell_profile.ps1 - PowerShell 7 profile
 # This file is managed by chezmoi. Always use `chezmoi edit $profile``
-#Requires -Version 7
+# Requires -Version 7
 
 # CHOCOLATEY tab-completions - see https://ch0.co/tab-completion
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
