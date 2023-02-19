@@ -1,4 +1,8 @@
 {
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.formatOnSave": true
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -30,6 +34,8 @@
   "extensions.ignoreRecommendations": false,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
+  "java.format.settings.profile": "GoogleStyle",
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   "settingsSync.ignoredExtensions": [],
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "vscode-icons"
