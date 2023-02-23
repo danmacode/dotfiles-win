@@ -1,17 +1,28 @@
 {
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.detectIndentation": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.insertSpaces": true,
+    "editor.ruler": 80,
+    "editor.suggest.insertMode": "replace",
+    "editor.tabSize": 2
+  },
   "[go]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
     "editor.formatOnSave": true,
     "editor.insertSpaces": false,
+    "editor.ruler": 100,
     "editor.suggest.snippetsPreventQuickSuggestions": false
   },
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
-    "editor.formatOnSave": true,
     "editor.insertSpaces": true,
-    "editor.tabSize": 2
+    "editor.ruler": 100,
+    "editor.tabSize": 2,
+    "editor.wordWrapColumn": 100
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -32,12 +43,14 @@
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.ruler": 88
   },
   "[shellscript]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
+  "dart.lineLength": 80,
   "editor.fontFamily": "Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.minimap.enabled": true,
