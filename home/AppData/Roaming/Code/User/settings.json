@@ -4,7 +4,7 @@
     "editor.detectIndentation": false,
     "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.insertSpaces": true,
-    "editor.ruler": 80,
+    "editor.rulers": [80],
     "editor.suggest.insertMode": "replace",
     "editor.tabSize": 2
   },
@@ -14,19 +14,20 @@
     },
     "editor.formatOnSave": true,
     "editor.insertSpaces": false,
-    "editor.ruler": 100,
+    "editor.rulers": [100],
     "editor.suggest.snippetsPreventQuickSuggestions": false
   },
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
     "editor.insertSpaces": true,
-    "editor.ruler": 100,
+    "editor.rulers": [100],
     "editor.tabSize": 2,
     "editor.wordWrapColumn": 100
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.rulers": [80]
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -44,7 +45,7 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
-    "editor.ruler": 88
+    "editor.rulers": [88]
   },
   "[shellscript]": {
     "editor.formatOnSave": true,
