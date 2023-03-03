@@ -59,7 +59,7 @@
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "java.format.settings.profile": "GoogleStyle",
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.settings.url": "https://raw.githubusercontent.com/danmacode/dotfiles-win/main/assets/ide/vscode/java-google-style.xml",
   "settingsSync.ignoredExtensions": [],
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "vscode-icons"
