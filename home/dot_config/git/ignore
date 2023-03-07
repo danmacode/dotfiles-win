@@ -1,0 +1,11 @@
+# vim: set filetype=gitignore:
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# typescript command garbage
+tscommand*.txt
+
+# npm things
+npm-debug.log

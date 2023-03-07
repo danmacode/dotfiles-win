@@ -4,3 +4,6 @@
 [alias]
 	comsig = commit -S
 	su = submodule update
+	# show all deleted files in the repo
+    showdeleted = "!git log --diff-filter=D --summary | grep delete"
+	

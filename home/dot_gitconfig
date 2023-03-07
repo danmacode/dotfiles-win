@@ -17,3 +17,8 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[include]
+    # local gitconfig, outside of version control
+    # silently ignored if the file doesn't exist
+	# read last
+	path = ~/.gitconfig-local
