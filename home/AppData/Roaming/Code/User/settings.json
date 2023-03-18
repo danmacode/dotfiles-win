@@ -60,6 +60,8 @@
   "files.insertFinalNewline": true,
   "java.format.settings.profile": "GoogleStyle",
   "java.format.settings.url": "https://raw.githubusercontent.com/danmacode/dotfiles-win/main/assets/ide/vscode/java-google-style.xml",
+  "ormolu.notifyOnParseError": true,
+  "ormolu.path": "ormolu",
   "settingsSync.ignoredExtensions": [],
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "vscode-icons"
