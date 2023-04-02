@@ -1,0 +1,3 @@
+# -*-mode:gitconfig-*- vim:ft=gitconfig
+#
+# ~/.gitconfig-local - This local (untracked) gitconfig is read after ~/.config/git/config
