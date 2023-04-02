@@ -12,3 +12,5 @@ Get-ChildItem "$env:USERPROFILE\Documents\WindowsPowerShell\Functions\*.ps1" | F
 # ALIASES
 New-Alias np Notepad.exe
 Set-Alias tn Test-NetConnection
+
+Write-Host "PROFILE: $PSScriptRoot"
