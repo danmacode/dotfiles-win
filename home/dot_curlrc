@@ -1,0 +1,12 @@
+# -*-mode:shell-*- vim:ft=sh
+#
+# ~/.curlrc - Curl config file. More info: https://everything.curl.dev/
+
+# Headers
+-H "Accept-Language: en-US,en;q=0.8"
+
+# follow redirects
+--location
+
+#verbose
+#--verbose
