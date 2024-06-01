@@ -7,7 +7,8 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 If (Test-Path($ChocolateyProfile)) { Import-Module "$ChocolateyProfile" }
 
 # CUSTOM FUNCS - load own fns at startup
-Get-ChildItem "$env:USERPROFILE\Documents\WindowsPowerShell\Functions\*.ps1" | ForEach-Object { .$_ }
+$FuncsDir = "$env:USERPROFILE\Documents\WindowsPowerShell\Functions"
+If (Test-Path($FuncsDir)) { Get-ChildItem $FuncsDir | ForEach-Object { .$_ } }
 
 # ALIASES
 New-Alias np Notepad.exe
