@@ -22,3 +22,22 @@
     # silently ignored if the file doesn't exist
 	# read last
 	path = ~/.gitconfig-local
+[alias]	
+    # show all deleted files in the repo
+    showdeleted = "!git log --diff-filter=D --summary | grep delete"
+	
+	# Pretty log
+	gl = git log --oneline --graph --decorate --all
+
+    # stage changed files ammending last commit without changing its message
+    ca = commit --amend --no-edit -a
+
+    # show aliases in git
+	la = git config --get-regexp '^alias\.'
+	
+	# Soft reset undoes last commit but keeps changes in working dir
+	gitback = git reset --soft HEAD~1
+	gitbackmain = !git reset --soft HEAD~1 && git push --force origin main
+
+	# Show user and user email
+	whoami = !git config user.name && git config user.email
