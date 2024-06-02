@@ -18,22 +18,22 @@
 	required = true
 	clean = git-lfs clean -- %f
 [include]
-    # local gitconfig, outside of version control
-    # silently ignored if the file doesn't exist
+	# local gitconfig, outside of version control
+	# silently ignored if the file doesn't exist
 	# read last
 	path = ~/.gitconfig-local
 [alias]	
-    # show all deleted files in the repo
-    showdeleted = "!git log --diff-filter=D --summary | grep delete"
+	# show all deleted files in the repo
+	showdeleted = "!git log --diff-filter=D --summary | grep delete"
 	
 	# Pretty log
 	gl = git log --oneline --graph --decorate --all
-
-    # stage changed files ammending last commit without changing its message
-    ca = commit --amend --no-edit -a
-
-    # show aliases in git
-	la = git config --get-regexp '^alias\.'
+	
+	# stage changed files ammending last commit without changing its message
+	ca = commit --amend --no-edit -a
+	
+	# list git aliases
+	las = config --get-regexp '^alias\\.'
 	
 	# Soft reset undoes last commit but keeps changes in working dir
 	gitback = git reset --soft HEAD~1
@@ -41,3 +41,4 @@
 
 	# Show user and user email
 	whoami = !git config user.name && git config user.email
+	

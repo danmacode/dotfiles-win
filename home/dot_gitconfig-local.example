@@ -1,0 +1,14 @@
+# -*-mode:gitconfig-*- vim:ft=gitconfig
+#
+# ~/.gitconfig-local - Local (untracked) gitconfig file. 
+# This file provides an example of what kind of secret variables
+# you want to put in this file. Similar to .env.example 
+#
+# Read order is as follows:
+#   1. ~/.config/git/config
+#   2. ~/.gitconfig
+#   3. ~/.gitconfig-local
+
+[user]
+	name = 
+	email = 

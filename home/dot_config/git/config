@@ -1,9 +1,9 @@
 # vim: set filetype=gitconfig:
 #
 # ~/.config/git/config - This file is always read before ~/.gitconfig
+
 [alias]
 	comsig = commit -S
 	su = submodule update
 	# show all deleted files in the repo
-    showdeleted = "!git log --diff-filter=D --summary | grep delete"
-	
+	showdeleted = "!git log --diff-filter=D --summary | grep delete"
