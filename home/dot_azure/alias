@@ -1,0 +1,11 @@
+; vim: ft=dosini:
+; -*- mode: conf -*-
+
+[rglist]
+command = group list --output table
+
+[ls-groups]
+command = group list --query '[].{Name:name, Location:location}' --output table
+
+[get-vm-ip {{ resourceGroup }} {{ vmName }}]
+command = vm list-ip-addresses --resource-group {{ resourceGroup }} --name {{ vmName }} --query [0].virtualMachine.network.publicIpAddresses[0].ipAddress
