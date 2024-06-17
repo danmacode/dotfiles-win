@@ -1,0 +1,16 @@
+# ~/.config/starship.toml
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# No new line between shell prompts
+add_newline = false
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[✗](bold red)"
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+format = '[$time ]($style)'

@@ -14,4 +14,12 @@ If (Test-Path($FuncsDir)) { Get-ChildItem $FuncsDir | ForEach-Object { .$_ } }
 New-Alias np Notepad.exe
 Set-Alias tn Test-NetConnection
 
-Write-Host "PROFILE: $PSScriptRoot"
+# Use starship or custom pwsh prompt
+if (Get-Command starship) { Invoke-Expression (&starship init powershell) }
+else {
+	function Prompt {
+		Write-Host ($PWD -replace [regex]::Escape([Environment]::GetFolderPath("UserProfile")), "~") -ForegroundColor Cyan
+		Write-Host (Get-Date -format HH:mm) -NoNewLine
+		return " ❯ ";
+	}
+}
