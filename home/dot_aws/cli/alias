@@ -1,0 +1,29 @@
+# ~/.aws/cli/alias
+# vim: set ft=dosini et ts=4 sw=4:
+
+[toplevel]
+# Common Aliases
+whoami = sts get-caller-identity
+whoami2 = sts get-caller-identity --query Account --output text
+
+# EC2 Aliases
+ls-ec2 = ec2 describe-instances
+start-ec2 = ec2 start-instances --instance-ids
+stop-ec2 = ec2 stop-instances --instance-ids
+reboot-ec2 = ec2 reboot-instances --instance-ids
+terminate-ec2 = ec2 terminate-instances --instance-ids
+
+# IAM Aliases
+ls-users = iam list-users
+ls-roles = iam list-roles
+ls-policies = iam list-policies
+
+# CloudFormation Aliases
+ls-stacks = cloudformation list-stacks
+
+running-instances = ec2 describe-instances \
+    --filter Name=instance-state-name,Values=running \
+    --output table \
+    --query 'Reservations[].Instances[].{ID: InstanceId,Hostname: PublicDnsName,Name: Tags[?Key==`Name`].Value | [0],Type: InstanceType, Platform: Platform || `Linux`}'
+
+list-sgs = ec2 describe-security-groups --query "SecurityGroups[].[GroupId, GroupName]" --output text
