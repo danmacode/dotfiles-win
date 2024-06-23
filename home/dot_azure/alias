@@ -1,11 +1,49 @@
-; vim: ft=dosini:
-; -*- mode: conf -*-
+# ~/.azure/alias
+# vim: set ft=dosini et ts=4 sw=4:
 
-[rglist]
+# =======================================
+# Resource Group Management
+# =======================================
+# List all resource groups in the subscription in table format
+[ls-rg]
 command = group list --output table
 
-[ls-groups]
+# List all resource groups with their name and location in table format
+[ls-rg2]
 command = group list --query '[].{Name:name, Location:location}' --output table
+
+# List resource groups with their tags
+[rg-tags]
+command = group list --query '[].{Name:name, Location:location, Tags:tags}' --output table
+
+# Show details of a specific resource group
+[rg-show {{ resourceGroup }}]
+command = group show --name {{ resourceGroup }} --output json
+
+# =======================================
+# Virtual Machine Management
+# =======================================
+# List all VMs in a subscription
+[ls-vms]
+command = vm list --output table
+
+[start-vm {{ resourceGroup }} {{ vmName }}]
+
+command = vm start --resource-group {{ resourceGroup }} --name {{ vmName }}
+[stop-vm {{ resourceGroup }} {{ vmName }}]
+command = vm stop --resource-group {{ resourceGroup }} --name {{ vmName }}
 
 [get-vm-ip {{ resourceGroup }} {{ vmName }}]
 command = vm list-ip-addresses --resource-group {{ resourceGroup }} --name {{ vmName }} --query [0].virtualMachine.network.publicIpAddresses[0].ipAddress
+
+# =======================================
+# Etc
+# =======================================
+# List all storage accounts in a subscription
+[ls-storage]
+command = storage account list --output table
+
+# List all web apps in a subscription
+[ls-webapps]
+command = webapp list --output table
+
