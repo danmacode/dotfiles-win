@@ -1,24 +1,16 @@
-# vim: set filetype=conf:
-#
-# ~/.ssh/config - config file for managing ssh keys
+# ~/.ssh/config
+# vim: set ft=dosini ts=4 sw=4:
 
-# github account
-Host github
-    Hostname github.com
-    User git
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_ed25519.pub
+# Default settings for all hosts
+Host *
+    LogLevel INFO
 
-# github company account
+# Include another configuration file
+Include ~/.ssh/conf.d/*
+
+# Example host config
 # Host github_company
-#     Hostname github.com
+#     HostName github.com
 #     User git
 #     IPreferredAuthentications publickey
 #     IdentityFile ~/.ssh/id_rsa_companyacc
-
-# gitlab account
-Host gitlab
-    Hostname gitlab.com
-    User git
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_ed25519.pub
