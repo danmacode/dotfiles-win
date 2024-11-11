@@ -1,6 +1,7 @@
-# vim: set filetype=gitconfig:
+# vim: set ft=dosini et ts=4 sw=4:
 #
 # ~/.gitconfig - This global gitconfig is read after ~/.config/git/config
+
 [user]
 	name = danmacode
 	email = danmacode1@gmail.com
@@ -18,9 +19,8 @@
 	required = true
 	clean = git-lfs clean -- %f
 [include]
-	# local gitconfig, outside of version control
-	# silently ignored if the file doesn't exist
-	# read last
+	# Import the local gitconfig file, which is outside of version control
+	# These are read last, and silently ignored if the file doesn't exist
 	path = ~/.gitconfig-local
 [alias]	
 	# show all deleted files in the repo
@@ -28,7 +28,10 @@
 	
 	# Pretty log
 	gl = git log --oneline --graph --decorate --all
-	
+
+	# Git Please
+	please = push --force-with-lease
+
 	# stage changed files ammending last commit without changing its message
 	ca = commit --amend --no-edit -a
 	
@@ -41,4 +44,20 @@
 
 	# Show user and user email
 	whoami = !git config user.name && git config user.email
+
+	# Print the mainbranch
+	mainbranch = !git remote show origin | sed -n '/HEAD branch/s/.*: //p'
 	
+	# Work In Progress (alternative to git stash)
+	wip = "!f() { git add --all && git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m \"--wip-- [skip ci] ${*}\" -m \"${*} \n $(git diff --name-only --cached)\"; }; f"
+	unwip = "!f() { git rev-list --max-count=1 --format='%s' HEAD | sed -n '/--wip--/q0' && git reset HEAD~1; }; f"
+	unwipall = "!f() { if [[ \"$(git log --grep='--wip--' --invert-grep --max-count=1 --format=format:%H)\" != \"$(git rev-parse HEAD)\" ]]; then git reset \"$(git log --grep='--wip--' --invert-grep --max-count=1 --format=format:%H)\" || return 1; fi; }; f"
+
+	# Get the url of local repo
+	url = "!f() { echo `git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#http://#' -e 's@com:@com/@'` | head -n1; }; f"
+
+	# Cherry-pick showing original SHA
+	pick = cherry-pick -x
+
+	# Git amend last commit (but don't include new files)
+	amend-last = !git commit --amend --no-edit $(git diff --name-only HEAD^ HEAD)
