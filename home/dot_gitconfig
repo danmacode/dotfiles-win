@@ -7,12 +7,18 @@
 	email = danmacode1@gmail.com
 [init]
 	defaultBranch = main
+[i18n]
+	filesEncoding = utf-8
 [core]
 	editor = code --wait
 	autocrlf = input
 	eol = lf
 	# std convention is treating all filenames as case insensitive
 	ignoreCase = true
+	# Flags spaces before tabs and trailing whitespace but allow indenting with spaces
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+	# Avoid Git for Windows' 260-character filename limit
+	longpaths = true
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
