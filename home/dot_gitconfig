@@ -7,6 +7,8 @@
 	email = danmacode1@gmail.com
 [init]
 	defaultBranch = main
+[color]
+	ui = auto
 [i18n]
 	filesEncoding = utf-8
 [core]
