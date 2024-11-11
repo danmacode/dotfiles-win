@@ -30,6 +30,11 @@
 	# Import the local gitconfig file, which is outside of version control
 	# These are read last, and silently ignored if the file doesn't exist
 	path = ~/.gitconfig-local
+[gpg]
+	# Define SSH-based signing for commits
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
 [alias]	
 	# show all deleted files in the repo
 	showdeleted = "!git log --diff-filter=D --summary | grep delete"
