@@ -1,0 +1,32 @@
+# vim: set ft=dosini et ts=4 sw=4:
+#
+# ~/.azure/config - config file for az-cli
+
+
+[core]
+output = jsonc
+collect_telemetry = false
+cache_ttl = 10
+only_show_errors = false
+error_recommendation = true
+no_color = false
+disable_progress_bar = false
+first_run = false
+
+[logging]
+enable_log_file = true
+
+[auto-upgrade]
+enable = false
+all = false
+prompt = false
+
+[output]
+show_survey_link = false
+
+[extension]
+use_dynamic_install = yes_prompt
+dynamic_install_allow_preview = false
+
+[next]
+recommended_type = all
